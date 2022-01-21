@@ -6,20 +6,31 @@
 
 #include "tools/node/node.h"
 
-LinkedList& reverse_list(LinkedList& head) {
-    return head;
+Node* reverse_list(Node* head) {
+    Node* prev;
+
+    while (head != nullptr) {
+        Node* next = head->next; 
+        head->next = prev;
+        prev = head;
+        head = next;
+    }
+
+    return prev;
 }
 
 
 int main()
 {
-    LinkedList head;
-    head.insertNode(1);
-    head.insertNode(2);
-    head.insertNode(3);
-    head.insertNode(4);
-    head.insertNode(4);
-    head.insertNode(4);
-    head.printList();
+    LinkedList list;
+    list.insertNode(1);
+    list.insertNode(2);
+    list.insertNode(3);
+    list.insertNode(4);
+    list.insertNode(4);
+    list.insertNode(4);
+    list.printList();
+    list.head = reverse_list(list.head);
+    list.printList();
 }
 

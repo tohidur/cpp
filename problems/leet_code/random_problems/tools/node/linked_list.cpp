@@ -87,5 +87,6 @@ void LinkedList::printList() {
         cout << temp->data << " ";
         temp = temp->next;
     }
+    cout << '\n';
 }
 

@@ -26,8 +26,9 @@ public:
 
 // LinkedList class to implement a linked list.
 class LinkedList {
-    Node* head;
 public:
+    Node* head;
+
     // Default constructor
     LinkedList() { head = nullptr; }
 
