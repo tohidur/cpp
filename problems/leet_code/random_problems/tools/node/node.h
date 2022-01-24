@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 
 using namespace std;
 
@@ -20,6 +21,17 @@ public:
     Node(int data) {
         this->data = data;
         this->next = nullptr;
+    }
+};
+
+
+class NTreeNode {
+public:
+    int data;
+    vector<NTreeNode*> childs;
+
+    NTreeNode(int data) {
+        this->data = data;
     }
 };
 
